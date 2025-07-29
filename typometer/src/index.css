@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
+  /* Prevent horizontal scrolling on mobile */
+  overflow-x: hidden;
 }
 
 code {
@@ -16,4 +18,21 @@ code {
 
 * {
   box-sizing: border-box;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  body {
+    /* Prevent zoom on input focus on iOS */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+}
+
+/* Ensure proper touch handling */
+@media (hover: none) and (pointer: coarse) {
+  /* Improve touch targets */
+  button, select, input {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

@@ -39,3 +39,24 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 12px;
+  }
+}
+
+/* Ensure proper viewport handling */
+@media (max-width: 320px) {
+  .app-container {
+    padding: 8px;
+  }
+}
